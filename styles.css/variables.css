@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,23 +7,154 @@
 }
 
 :root {
-    --primary-color: #1ec0fb;
-    --secondary-color: #14a0d2;
-    --accent-color: #05a8e3;
-    --text-primary: #f8fafc;
-    --text-secondary: #cbd5e1;
+    /* Colores principales */
+    --primary-color: #06b6d4;
+    --primary-dark: #0891b2;
+    --primary-light: #22d3ee;
+    --primary-glow: rgba(6, 182, 212, 0.4);
+
+    /* Fondos */
     --bg-primary: #0f172a;
     --bg-secondary: #1e293b;
-    --bg-gradient: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-tertiary: #334155;
+    --bg-card: rgba(30, 41, 59, 0.8);
+
+    /* Textos */
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+
+    /* Efectos */
+    --gradient-primary: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    --gradient-bg: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    --glassmorphism: rgba(30, 41, 59, 0.7);
+    --backdrop-blur: blur(20px);
+
+    /* Sombras */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+    --shadow-glow: 0 0 40px rgba(6, 182, 212, 0.3);
+
+    /* Transiciones */
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Bordes */
+    --border-color: rgba(148, 163, 184, 0.1);
+    --border-radius-sm: 8px;
+    --border-radius-md: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-xl: 24px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    scroll-behavior: smooth;
     background: var(--bg-primary);
+    overflow-x: hidden;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-tertiary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-base);
+}
+
+/* Imágenes */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contenedor base */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Sección base */
+.section {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.section-alt {
+    background: var(--bg-secondary);
+}
+
+/* Títulos de sección */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Efecto de línea bajo título */
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+/* Utilidades */
+.text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition-slow);
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
 }

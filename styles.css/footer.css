@@ -1,34 +1,88 @@
-/* Footer */
+/* ===== FOOTER ===== */
+
 .footer {
     background: var(--bg-secondary);
-    color: var(--text-primary);
-    text-align: center;
-    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 0 2rem;
 }
 
-.scroll-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    width: 50px;
-    height: 50px;
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.footer-logo span {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-social-link {
+    display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--transition);
-    z-index: 1000;
+    width: 40px;
+    height: 40px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    transition: var(--transition-fast);
 }
 
-.scroll-to-top:hover {
-    background: var(--secondary-color);
+.footer-social-link:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
     transform: translateY(-3px);
 }
 
-.scroll-to-top.visible {
+.footer-text {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.footer-text a {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.footer-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+.footer-bottom {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
+
+.footer-bottom i {
+    color: #ef4444;
+    margin: 0 0.25rem;
 }

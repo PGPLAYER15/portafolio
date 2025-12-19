@@ -1,75 +1,180 @@
-/* Navigation */
+/* ===== NAVEGACIÓN ===== */
+
 .navbar {
     position: fixed;
     top: 0;
-    width: 100%;
-    background: rgba(15, 23, 42, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(52, 66, 85, 0.3);
+    left: 0;
+    right: 0;
     z-index: 1000;
     padding: 1rem 0;
-    transition: var(--transition);
+    transition: var(--transition-base);
 }
 
 .navbar.scrolled {
-    background: rgba(15, 23, 42, 0.98);
-    box-shadow: var(--card-shadow);
+    background: var(--glassmorphism);
+    backdrop-filter: var(--backdrop-blur);
+    -webkit-backdrop-filter: var(--backdrop-blur);
+    box-shadow: var(--shadow-lg);
+    padding: 0.75rem 0;
 }
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
+.navbar .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
 }
 
-.logo {
+/* Logo */
+.nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
+.nav-logo span {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Links de navegación */
 .nav-links {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--text-primary);
+.nav-link {
+    color: var(--text-secondary);
     font-weight: 500;
-    transition: var(--transition);
+    font-size: 0.95rem;
     position: relative;
+    padding: 0.5rem 0;
 }
 
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
-.nav-links a::after {
+.nav-link::after {
     content: '';
     position: absolute;
+    bottom: 0;
+    left: 0;
     width: 0;
     height: 2px;
-    bottom: -5px;
-    left: 0;
-    background: var(--primary-color);
-    transition: var(--transition);
+    background: var(--gradient-primary);
+    transition: var(--transition-fast);
 }
 
-.nav-links a:hover::after {
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text-primary);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
     width: 100%;
 }
 
-.mobile-menu {
+/* Botón de menú móvil */
+.nav-toggle {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 0.5rem;
     background: none;
     border: none;
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: var(--text-primary);
+    transition: var(--transition-fast);
+    border-radius: 2px;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Botones CTA en nav */
+.nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-btn {
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius-sm);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+}
+
+.nav-btn-outline {
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.nav-btn-outline:hover {
+    background: var(--primary-color);
+    color: var(--bg-primary);
+}
+
+.nav-btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+    border: none;
+}
+
+.nav-btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+/* Menú móvil */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--glassmorphism);
+        backdrop-filter: var(--backdrop-blur);
+        -webkit-backdrop-filter: var(--backdrop-blur);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: var(--transition-base);
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .nav-cta {
+        display: none;
+    }
 }

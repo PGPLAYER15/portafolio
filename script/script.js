@@ -7,16 +7,16 @@
     });
     
     function handleLinkClick(event) {
-        event.preventDefault(); // Evita que el enlace se siga por defecto
+        event.preventDefault(); 
         const target = event.currentTarget.getAttribute('href');
         smoothScroll(target, 700, 79);
     }
     
     function smoothScroll(target, duration, offset) {
         const targetElement = document.querySelector(target);
-        if (!targetElement) return; // Si no se encuentra el elemento, salimos de la función
+        if (!targetElement) return; 
         
-        const targetPosition = targetElement.offsetTop - offset; // Usando offsetTop en lugar de getBoundingClientRect().top
+        const targetPosition = targetElement.offsetTop - offset; 
         const startPosition = window.pageYOffset;
         const distance = targetPosition - startPosition;
         let startTime = null;

@@ -1,340 +1,658 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PORTAFOLIO</title>
-    <link rel="stylesheet" href="styles\normalize.css">
-    <link rel="stylesheet" href="styles\index.css">
+    <meta name="description"
+        content="Portafolio de Marco Vinicio Palazuelos Leon - Desarrollador Full-Stack | Ingeniero de Software | Python, Java, JavaScript">
+    <meta name="keywords"
+        content="desarrollador, full-stack, software, javascript, react, python, java, fastapi, portfolio">
+    <meta name="author" content="Marco Vinicio Palazuelos Leon">
+    <title>Marco Vinicio | Ingeniero de Software</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles.css/variables.css">
+    <link rel="stylesheet" href="styles.css/animation.css">
+    <link rel="stylesheet" href="styles.css/navigation.css">
+    <link rel="stylesheet" href="styles.css/hero.css">
+    <link rel="stylesheet" href="styles.css/section.css">
+    <link rel="stylesheet" href="styles.css/footer.css">
+    <link rel="stylesheet" href="styles.css/responsive.css">
+    <link rel="stylesheet" href="styles.css/safari-fix.css">
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/8c587a96fb.js" crossorigin="anonymous"></script>
-    
+
+    <!-- Devicon - Iconos de tecnologías -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
+
 <body>
-    <header>
-    
+    <!-- ===== NAVEGACIÓN ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#hero" class="nav-logo">
+                Marco<span>Dev</span>
+            </a>
 
-        <section class="contenedor-cabecera">
-            <div class = "cabecera">
-                
-                <aside class="contenedor-menu">
-    
-                    <div class="nombre">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#certifications" class="nav-link">Certificaciones</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
 
-                        <ul class="menu-lista">
-                            <li class="menu"><a class="Link" href="#seccion-inicio"> <img class="img-menu" src="img/face-grin-wide-regular.svg" alt=""> <span>inicio</span> </a></li>
-                            <li class="menu"><a class="Link" href="#seccion-sobre-mi"><img class="img-menu" src="img/address-card-solid.svg" alt=""><span>Sobre mi</span></a></li>
-                            <li class="menu"><a class="Link" href="#seccion-skills"> <img class="img-menu" src="img/gears-solid.svg" alt=""> <Span>Skills</Span> </a></li>
-                            <li class="menu"><a class="Link" href="#seccion-hobbie"> <img class="img-menu" src="img/hourglass-regular.svg" alt=""><span> Hobbies</span> </a></li> 
-                            <li class="menu"><a class="Link" href="#seccion-formacion"> <img class="img-menu" src="img/book-solid.svg" alt=""> <span> Formacion</span> </a></li>
-                            <li class="menu"><a class="Link" href="#seccion-proyectos"><img class="img-menu" src="img/bars-progress-solid.svg" alt=""> <span>Proyectos</span> </a></li>
-                            
-                        </ul>
-
-                    </div>
-                    
-    
-                </aside>
-    
-                
-    
+            <div class="nav-cta">
+                <a href="#contact" class="nav-btn nav-btn-primary">Contáctame</a>
             </div>
-        </section>
-            
-        <div class="x">
-            
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-    </header>
-    
-    <main>
-        <div id= "seccion-inicio" class="inicio">
-            <div class="presentacion-contenedor">
-                <h1 class="presentacion">¡Hola!, mi nombre es Marco Vinicio Palazuelos Leon</h1>
-                <p class="presentacion-p">Soy estudiante de la UADEO actualmente estoy en mi primer año de la universidad<br> y estoy en el programa Oracle ONE (oracle next education) futuro ingeniero en software</p>
-                <ul class="redes">
-                    <li class="red"> <a href="https://github.com/PGPLAYER15"> <img src="img/logos/github.svg" alt=""> </a></li>
-                    <li class="red"> <a href="https://www.linkedin.com/in/marco-vinicio-palazuelos-leon-/"> <img src="img/logos/linkedin.svg" alt=""> </a></li>
-                </ul>
-    
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Disponible para trabajar</span>
+                </div>
+
+                <p class="hero-greeting">¡Hola! 👋 Mi nombre es</p>
+
+                <h1 class="hero-title">
+                    Marco Vinicio <br>
+                    <span class="highlight">Palazuelos Leon</span>
+                </h1>
+
+                <p class="hero-role">
+                    <span id="typingText"></span>
+                    <span class="typing-cursor"></span>
+                </p>
+
+                <p class="hero-description">
+                    Estudiante de Ingeniería en Software con experiencia práctica construyendo
+                    aplicaciones empresariales full-stack escalables usando Python, Java y JavaScript.
+                    Apasionado por aplicaciones con IA, sistemas distribuidos y arquitecturas cloud-native.
+                    Nivel de inglés B2.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Ver Proyectos
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Contactar
+                    </a>
+                </div>
+
+                <div class="hero-social">
+                    <a href="https://github.com/PGPLAYER15" target="_blank" class="social-link" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marco-vinicio-palazuelos-leon-/" target="_blank"
+                        class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
             </div>
-            <img class="perfil" src="img/PERFIL.jpg" alt="Perfil de Marco Vinicio Palazuelos Leon">
-            
+
+            <div class="hero-image">
+                <div class="hero-avatar-container">
+                    <img src="img/PERFIL.jpg" alt="Marco Vinicio Palazuelos Leon" class="hero-avatar">
+                </div>
+            </div>
         </div>
-    
-        <section id="seccion-sobre-mi" class="contenedor-sobre-mi">
-            <h2 class="sobre-mi-titulo">Sobre mi</h2>
-            <p class="sobre-mi-p">
-                ¡Hola! Soy Marco y me encanta todo lo relacionado con la programación. Me gusta leer sobre estos temas. Actualmente, estoy estudiando en la universidad autonoma de occidente la carrera de Ingeniería en Software.Tuve la oportunidad de participar en el programa Oracle ONE en Alura Latam. Me gusta trabajar en equipo y ayudar a otros a aprender, e igualmente aprender tips o cosas para mejorar. Soy empático, responsable, disciplinado y respetuoso.
-                me gustan los lenguajes de javascript , python , me gustaria aprender mas a fondo sobre python y js quiero dominar al 100% esos dos lenguajes , me gustaria tambien desarrollarme por el lado del back-end pero quiero ser experto en el front-end por el momento , pero quiero llegar a ser un full stack
-            </p>
-        </section>
-    
-        <section id="seccion-skills"class="contenedor-skills">
-    
-            <h3 class="titulo-skills">Skills</h1>
-    
-                <div class="skills__line">
-                    <div class="Skill-hobbie-boxs">
-                        <ul>
-                            <li class="skills-logo"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#fe4f00" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/></svg></li>
-                            <li class="skilss-name"> Html 5</li>
-                        </ul>
-    
-                    </div>
-                    <div class="Skill-hobbie-boxs" >
-                        <ul>
-                            <li class="skills-logo"><svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFD43B" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/></svg> </li>
-                            <li class="skilss-name"> javascript </li>
-                        </ul>
-    
-                    </div>
-                    <div class="Skill-hobbie-boxs">
-                        <ul>
-                            <li class="skills-logo"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#017fdf" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/></svg> </li>
-                            <li class="skilss-name"> css </li>
-                        </ul>
-    
-                    </div>
-                    <div class="Skill-hobbie-boxs">
-                        <ul>
-                            <li class="skills-logo"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#0aadff" d="M418.2 177.2c-5.4-1.8-10.8-3.5-16.2-5.1 .9-3.7 1.7-7.4 2.5-11.1 12.3-59.6 4.2-107.5-23.1-123.3-26.3-15.1-69.2 .6-112.6 38.4-4.3 3.7-8.5 7.6-12.5 11.5-2.7-2.6-5.5-5.2-8.3-7.7-45.5-40.4-91.1-57.4-118.4-41.5-26.2 15.2-34 60.3-23 116.7 1.1 5.6 2.3 11.1 3.7 16.7-6.4 1.8-12.7 3.8-18.6 5.9C38.3 196.2 0 225.4 0 255.6c0 31.2 40.8 62.5 96.3 81.5 4.5 1.5 9 3 13.6 4.3-1.5 6-2.8 11.9-4 18-10.5 55.5-2.3 99.5 23.9 114.6 27 15.6 72.4-.4 116.6-39.1 3.5-3.1 7-6.3 10.5-9.7 4.4 4.3 9 8.4 13.6 12.4 42.8 36.8 85.1 51.7 111.2 36.6 27-15.6 35.8-62.9 24.4-120.5-.9-4.4-1.9-8.9-3-13.5 3.2-.9 6.3-1.9 9.4-2.9 57.7-19.1 99.5-50 99.5-81.7 0-30.3-39.4-59.7-93.8-78.4zM282.9 92.3c37.2-32.4 71.9-45.1 87.7-36 16.9 9.7 23.4 48.9 12.8 100.4-.7 3.4-1.4 6.7-2.3 10-22.2-5-44.7-8.6-67.3-10.6-13-18.6-27.2-36.4-42.6-53.1 3.9-3.7 7.7-7.2 11.7-10.7zM167.2 307.5c5.1 8.7 10.3 17.4 15.8 25.9-15.6-1.7-31.1-4.2-46.4-7.5 4.4-14.4 9.9-29.3 16.3-44.5 4.6 8.8 9.3 17.5 14.3 26.1zm-30.3-120.3c14.4-3.2 29.7-5.8 45.6-7.8-5.3 8.3-10.5 16.8-15.4 25.4-4.9 8.5-9.7 17.2-14.2 26-6.3-14.9-11.6-29.5-16-43.6zm27.4 68.9c6.6-13.8 13.8-27.3 21.4-40.6s15.8-26.2 24.4-38.9c15-1.1 30.3-1.7 45.9-1.7s31 .6 45.9 1.7c8.5 12.6 16.6 25.5 24.3 38.7s14.9 26.7 21.7 40.4c-6.7 13.8-13.9 27.4-21.6 40.8-7.6 13.3-15.7 26.2-24.2 39-14.9 1.1-30.4 1.6-46.1 1.6s-30.9-.5-45.6-1.4c-8.7-12.7-16.9-25.7-24.6-39s-14.8-26.8-21.5-40.6zm180.6 51.2c5.1-8.8 9.9-17.7 14.6-26.7 6.4 14.5 12 29.2 16.9 44.3-15.5 3.5-31.2 6.2-47 8 5.4-8.4 10.5-17 15.5-25.6zm14.4-76.5c-4.7-8.8-9.5-17.6-14.5-26.2-4.9-8.5-10-16.9-15.3-25.2 16.1 2 31.5 4.7 45.9 8-4.6 14.8-10 29.2-16.1 43.4zM256.2 118.3c10.5 11.4 20.4 23.4 29.6 35.8-19.8-.9-39.7-.9-59.5 0 9.8-12.9 19.9-24.9 29.9-35.8zM140.2 57c16.8-9.8 54.1 4.2 93.4 39 2.5 2.2 5 4.6 7.6 7-15.5 16.7-29.8 34.5-42.9 53.1-22.6 2-45 5.5-67.2 10.4-1.3-5.1-2.4-10.3-3.5-15.5-9.4-48.4-3.2-84.9 12.6-94zm-24.5 263.6c-4.2-1.2-8.3-2.5-12.4-3.9-21.3-6.7-45.5-17.3-63-31.2-10.1-7-16.9-17.8-18.8-29.9 0-18.3 31.6-41.7 77.2-57.6 5.7-2 11.5-3.8 17.3-5.5 6.8 21.7 15 43 24.5 63.6-9.6 20.9-17.9 42.5-24.8 64.5zm116.6 98c-16.5 15.1-35.6 27.1-56.4 35.3-11.1 5.3-23.9 5.8-35.3 1.3-15.9-9.2-22.5-44.5-13.5-92 1.1-5.6 2.3-11.2 3.7-16.7 22.4 4.8 45 8.1 67.9 9.8 13.2 18.7 27.7 36.6 43.2 53.4-3.2 3.1-6.4 6.1-9.6 8.9zm24.5-24.3c-10.2-11-20.4-23.2-30.3-36.3 9.6 .4 19.5 .6 29.5 .6 10.3 0 20.4-.2 30.4-.7-9.2 12.7-19.1 24.8-29.6 36.4zm130.7 30c-.9 12.2-6.9 23.6-16.5 31.3-15.9 9.2-49.8-2.8-86.4-34.2-4.2-3.6-8.4-7.5-12.7-11.5 15.3-16.9 29.4-34.8 42.2-53.6 22.9-1.9 45.7-5.4 68.2-10.5 1 4.1 1.9 8.2 2.7 12.2 4.9 21.6 5.7 44.1 2.5 66.3zm18.2-107.5c-2.8 .9-5.6 1.8-8.5 2.6-7-21.8-15.6-43.1-25.5-63.8 9.6-20.4 17.7-41.4 24.5-62.9 5.2 1.5 10.2 3.1 15 4.7 46.6 16 79.3 39.8 79.3 58 0 19.6-34.9 44.9-84.8 61.4zm-149.7-15c25.3 0 45.8-20.5 45.8-45.8s-20.5-45.8-45.8-45.8c-25.3 0-45.8 20.5-45.8 45.8s20.5 45.8 45.8 45.8z"/></svg> </li>
-                            <li class="skilss-name"> React </li>
-                        </ul>
-    
-                    </div>
-                    <div class="Skill-hobbie-boxs">
-                        <ul>
-                            <li class="skills-logo"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#ff6600" d="M439.6 236.1L244 40.5a28.9 28.9 0 0 0 -40.8 0l-40.7 40.6 51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.2 199v121.9c25.3 12.5 22.3 41.9 9.1 55a34.3 34.3 0 0 1 -48.6 0c-17.6-17.6-11.1-46.9 11.3-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1a28.9 28.9 0 0 0 0 40.8l195.6 195.6a28.9 28.9 0 0 0 40.8 0l194.7-194.7a28.9 28.9 0 0 0 0-40.8z"/></svg> </li>
-                            <li class="skilss-name"> git </li>
-                        </ul>
-    
-                    </div>
-                    <div class="Skill-hobbie-boxs">
-                        <ul>
-                            <li class="skills-logo"> <svg xmlns="http://www.w3.org/2000/svg" height="50" width="50" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#000000" d="M14 95.8C14 42.9 56.9 0 109.8 0H274.2C327.1 0 370 42.9 370 95.8C370 129.3 352.8 158.8 326.7 175.9C352.8 193 370 222.5 370 256C370 308.9 327.1 351.8 274.2 351.8H272.1C247.3 351.8 224.7 342.4 207.7 326.9V415.2C207.7 468.8 163.7 512 110.3 512C57.5 512 14 469.2 14 416.2C14 382.7 31.2 353.2 57.2 336.1C31.2 319 14 289.5 14 256C14 222.5 31.2 193 57.2 175.9C31.2 158.8 14 129.3 14 95.8zM176.3 191.6H109.8C74.2 191.6 45.4 220.4 45.4 256C45.4 291.4 74 320.2 109.4 320.4C109.5 320.4 109.7 320.4 109.8 320.4H176.3V191.6zM207.7 256C207.7 291.6 236.5 320.4 272.1 320.4H274.2C309.7 320.4 338.6 291.6 338.6 256C338.6 220.4 309.7 191.6 274.2 191.6H272.1C236.5 191.6 207.7 220.4 207.7 256zM109.8 351.8C109.7 351.8 109.5 351.8 109.4 351.8C74 352 45.4 380.8 45.4 416.2C45.4 451.7 74.6 480.6 110.3 480.6C146.6 480.6 176.3 451.2 176.3 415.2V351.8H109.8zM109.8 31.4C74.2 31.4 45.4 60.2 45.4 95.8C45.4 131.4 74.2 160.2 109.8 160.2H176.3V31.4H109.8zM207.7 160.2H274.2C309.7 160.2 338.6 131.4 338.6 95.8C338.6 60.2 309.7 31.4 274.2 31.4H207.7V160.2z"/></svg> </li>
-                            <li class="skilss-name"> Figma </li>
-                        </ul>
-    
-                    </div>
-                </div>
-                
-    
-            
-        
-        </section>
-    
-        <section id="seccion-hobbie" class="contenedor-hobbie">
-    
-            <h1 class="titulo-hobbies">Hobbies</h1>
-            <div class="linea-hobbies">
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"> <img src="img/logos/libro-abierto.svg" alt="leer"></li>
-                        <li class="hobbie-name"> leer</li>
-                    </ul>
-                </div>
-    
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"><img src="img/logos/ejercicio.svg" alt="dumbell"> </li>
-                        <li class="hobbie-name"> Ejercicio </li>
-                    </ul>
-                </div>
-    
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"><img src="img/logos/cocinando.svg" alt="cocinar"> </li>
-                        <li class="hobbie-name"> Cocinar</li>
-                    </ul>
-                </div>
-    
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"> <img src="img/logos/consola-de-juego.svg" alt="control"></li>
-                        <li class="hobbie-name">Jugar </li>
-                    </ul>
-                </div>
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"><img src="img/logos/notas-musicales.svg" alt="musica"> </li>
-                        <li class="hobbie-name">Musica </li>
-                    </ul>
-                </div>
-                <div class="Skill-hobbie-boxs">
-                    <ul>
-                        <li class="hobbie-logo"><img src="img/logos/monitor-de-tv.svg" alt="Series"> </li>
-                        <li class="hobbie-name"> Series </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    
-        <section id="seccion-formacion" class="formacion">
-            <h1 class="Formacion-titulo"> Formacion Academica</h1>
-            <div class="Contenedor-de-cajas">
 
-                <div class="caja-formaciones">
-
-                    <ul class="contenedor-formacion">
-    
-                        <li class="formaciones">
-                            <img class="imagen-formacion oracle" src="img/logos/logo-aluralatam-oracle.svg" alt="Alura">
-                        </li>
-    
-                        <li class="formaciones">
-                            <h4 class="forma">Programa Oracle Next education <br> con alura Latam</h4>
-                            <p class="forma"> en curso </p>
-                        </li>
-                        
-                </div>
-    
-                <div class="caja-formaciones">
-                    <ul class="contenedor-formacion">
-                        <li class=" formaciones">
-                            <img class="imagen-formacion" style="width: 200px;"  src="img/logos/UAdeO_Logo_Oficial.svg" alt="UAdeo">
-                        </li>
-        
-                        <li class="formaciones">
-                            <h4> Ingeniería en software <br> en la universidad autonoma de occidente </h4>
-                                <p> en curso </p>
-                        </li>
-                    </ul>
-                    
-                </div>
-            </div>
-            
-            
-        </section>
-    
-        <section id="seccion-proyectos" class="experiencia">
-    
-            <h1 class="titulo-experiencia"> Experiencia Profesional</h1>
-            <div class="caja-experiencia-container">
-                <div class="caja-experiencia">
-                    <ul class="contenedor-exp">
-                        <li class="listas-exp">
-                            <img class="img-exp" src="img/Encriptador.png" alt="">
-                        </li>
-                        <li class="listas-exp info-container">
-                            <h1 class="">Lenguajes Usados</h1>
-                            <div class="logos-exp">
-                                <i class="fa-brands fa-html5 fa-2xl" style="color: #f4542a;"></i>
-                                <i class="fa-brands fa-js fa-2xl" style="color: #FFD43B;"></i>
-                                <i class="fa-brands fa-css3-alt fa-2xl" style="color: #0091ff;"></i>
-                            </div>
-                            <span class="links">
-                                <a href="https://github.com/PGPLAYER15/challenge-ONE-1"> <i class="fa-brands fa-square-github fa-lg" style="color: #000000;"></i></a>
-                                <a href="https://pgplayer15.github.io/challenge-ONE-1/"> <i class="fa-solid fa-play" style="color: #000000;"></i> </a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="caja-experiencia">
-                    <ul class="contenedor-exp">
-                        <li class="listas-exp">
-                            <img class="img-exp" src="img/Barberia.png" alt="">
-                        </li>
-                        <li class="listas-exp info-container">
-                            <h1>Lenguajes Usados</h1>
-                            <div class="logos-exp">
-                                <i class="fa-brands fa-html5 fa-2xl" style="color: #f4542a;"></i>
-                                <i class="fa-brands fa-css3-alt fa-2xl" style="color: #0091ff;"></i>
-                            </div>
-                            <span class="links">
-                                <a href="https://github.com/PGPLAYER15/barberia-alura-io"> <i class="fa-brands fa-square-github fa-lg" style="color: #000000;"></i></a>
-                                <a href="https://pgplayer15.github.io/barberia-alura-io/"> <i class="fa-solid fa-play" style="color: #000000;"></i></a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="caja-experiencia">
-                    <ul class="contenedor-exp">
-                        <li class="listas-exp">
-                            <img class="img-exp" src="img/Alura_play.png" alt="">
-                        </li>
-                        <li class="listas-exp info-container">
-                            <h1>Lenguajes Usados</h1>
-                            <div class="logos-exp">
-                                <i class="fa-brands fa-html5 fa-2xl" style="color: #f4542a;"></i>
-                                <i class="fa-brands fa-css3-alt fa-2xl" style="color: #0091ff;"></i>
-                            </div>
-                            <span class="links">
-                                <a href="https://github.com/PGPLAYER15/aluraplay.io.git"> <i class="fa-brands fa-square-github fa-lg" style="color: #000000;"></i></a>
-                                <a href="https://pgplayer15.github.io/aluraplay.io/"> <i class="fa-solid fa-play" style="color: #000000;"></i></a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="caja-experiencia">
-                    <ul class="contenedor-exp">
-                        <li class="listas-exp">
-                            <img class="img-exp" src="img/Juego_secreto.png" alt="">
-                        </li>
-                        <li class="listas-exp info-container">
-                            <h1>Lenguajes Usados</h1>
-                            <div class="logos-exp">
-                                <i class="fa-brands fa-html5 fa-2xl" style="color: #f4542a;"></i>
-                                <i class="fa-brands fa-css3-alt fa-2xl" style="color: #0091ff;"></i>
-                                <i class="fa-brands fa-js fa-2xl" style="color: #FFD43B;"></i>
-                            </div>
-                            <span class="links">
-                                <a href="https://github.com/PGPLAYER15/juego-secreto"> <i class="fa-brands fa-square-github fa-lg" style="color: #000000;"></i></a>
-                                <a href="https://pgplayer15.github.io/juego-secreto/"> <i class="fa-solid fa-play" style="color: #000000;"></i></a>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
-    
-        </section>
-    
-        <section class="Seccion-formulario">
-
-            <div>
-
-                
-
-                <form>
-
-                    <h2 class="titulo-form">Contacto</h2>
-                    
-                    <img src="img/correo-de-contacto.svg" alt="">
-
-                    <div class="formulario-group">
-                        <form>
-                            <label for="name">Nombre</label>
-                            <input type="text" name="name" id="name" placeholder="nombre y apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+" title="Solo letras y espacios" required minlength="3">
-                    
-                            <label for="telefono">Telefono</label>
-                            <input type="tel" name="phone" id="phone" placeholder="Telefono" pattern="[0-9]{10}" title="Debe contener 10 dígitos" required maxlength="10" minlength="10">
-                    
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                    
-                            <label for="mensaje">Mensaje</label>
-                            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje" ></textarea>
-                    
-                            <input class="btn-enviar" type="submit" value="Enviar">
-                        </form>
-                    </div>
-                    
-            </form>
-            </div>
-            
-            
-            
-            
-            
-        </section>
-    </main>
-    <script src="./script/script.js"></script>
-</body>
-<footer>
-    <section class="Seccion-footer"> 
-        <p> Hecho Por Marco Vinicio Palazuelos Leon </p>
-        <p>Ingeniero en software</p>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
     </section>
 
-</footer>
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title reveal">Sobre Mí</h2>
+            <p class="section-subtitle reveal">Desarrollador Full-Stack enfocado en crear soluciones escalables</p>
+
+            <div class="about-content reveal">
+                <p class="about-text">
+                    Estudiante de Ingeniería en Software con experiencia práctica construyendo
+                    <strong>aplicaciones empresariales full-stack escalables</strong> usando Python, Java y JavaScript.
+                    Capacidad demostrada para diseñar APIs REST de alto rendimiento, optimizar consultas de bases de
+                    datos
+                    e implementar sistemas de autenticación seguros.
+                    <br><br>
+                    Sólida base en <strong>estructuras de datos, algoritmos y programación orientada a objetos</strong>.
+                    Apasionado por las aplicaciones potenciadas con IA, sistemas distribuidos y arquitecturas
+                    cloud-native.
+                    Actualmente en el <strong>6to semestre</strong> en la Universidad Autónoma de Occidente.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-title reveal">Habilidades Técnicas</h2>
+            <p class="section-subtitle reveal">Tecnologías y herramientas que domino</p>
+
+            <!-- Lenguajes de Programación -->
+            <h3 class="skills-category reveal">Lenguajes de Programación</h3>
+            <div class="skills-grid stagger-children reveal">
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-python" style="color: #3776AB;"></i>
+                    </div>
+                    <p class="skill-name">Python</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-java" style="color: #007396;"></i>
+                    </div>
+                    <p class="skill-name">Java</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-js" style="color: #F7DF1E;"></i>
+                    </div>
+                    <p class="skill-name">JavaScript</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-database" style="color: #336791;"></i>
+                    </div>
+                    <p class="skill-name">SQL</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-swift" style="color: #FA7343;"></i>
+                    </div>
+                    <p class="skill-name">Swift</p>
+                </div>
+            </div>
+
+            <!-- Frameworks & Bibliotecas -->
+            <h3 class="skills-category reveal">Frameworks & Bibliotecas</h3>
+            <div class="skills-grid stagger-children reveal">
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="devicon-fastapi-plain colored"></i>
+                    </div>
+                    <p class="skill-name">FastAPI</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-react" style="color: #61DAFB;"></i>
+                    </div>
+                    <p class="skill-name">React</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="devicon-spring-plain colored"></i>
+                    </div>
+                    <p class="skill-name">Spring Boot</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js" style="color: #339933;"></i>
+                    </div>
+                    <p class="skill-name">Node.js</p>
+                </div>
+            </div>
+
+            <!-- Herramientas & Tecnologías -->
+            <h3 class="skills-category reveal">Herramientas & Tecnologías</h3>
+            <div class="skills-grid stagger-children reveal">
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-docker" style="color: #2496ED;"></i>
+                    </div>
+                    <p class="skill-name">Docker</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt" style="color: #F05032;"></i>
+                    </div>
+                    <p class="skill-name">Git</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="devicon-postgresql-plain colored"></i>
+                    </div>
+                    <p class="skill-name">PostgreSQL</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="devicon-mysql-original colored"></i>
+                    </div>
+                    <p class="skill-name">MySQL</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-key" style="color: #000000;"></i>
+                    </div>
+                    <p class="skill-name">JWT</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="devicon-supabase-plain colored"></i>
+                    </div>
+                    <p class="skill-name">SupaBase</p>
+                </div>
+            </div>
+
+            <!-- Competencias -->
+            <h3 class="skills-category reveal">Competencias Core</h3>
+            <div class="skills-grid stagger-children reveal">
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-project-diagram" style="color: #06b6d4;"></i>
+                    </div>
+                    <p class="skill-name">Estructuras de Datos</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-code" style="color: #06b6d4;"></i>
+                    </div>
+                    <p class="skill-name">POO</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-server" style="color: #06b6d4;"></i>
+                    </div>
+                    <p class="skill-name">Backend Escalable</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-tachometer-alt" style="color: #06b6d4;"></i>
+                    </div>
+                    <p class="skill-name">Optimización</p>
+                </div>
+
+                <div class="skill-card hover-lift">
+                    <div class="skill-icon">
+                        <i class="fas fa-users" style="color: #06b6d4;"></i>
+                    </div>
+                    <p class="skill-name">Agile/Scrum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="section hobbies" id="education">
+        <div class="container">
+            <h2 class="section-title reveal">Formación Académica</h2>
+            <p class="section-subtitle reveal">Mi trayectoria educativa</p>
+
+            <div class="education-grid">
+                <div class="education-card reveal-left">
+                    <img src="img/logos/UAdeO_Logo_Oficial.svg" alt="Universidad Autónoma de Occidente"
+                        class="education-logo">
+                    <div class="education-info">
+                        <h4>Ingeniería en Software</h4>
+                        <p>Universidad Autónoma de Occidente</p>
+                        <p>Culiacán, Sinaloa, México</p>
+                        <p><em>Ago 2023 – Jun 2027</em></p>
+                        <span class="education-status">6to Semestre - En curso</span>
+                    </div>
+                </div>
+
+                <div class="education-card reveal-right">
+                    <img src="img/logos/logo-aluralatam-oracle.svg" alt="Oracle ONE con Alura Latam"
+                        class="education-logo">
+                    <div class="education-info">
+                        <h4>Programa Oracle Next Education</h4>
+                        <p>Con Alura Latam</p>
+                        <p>Front-End & React</p>
+                        <span class="education-status">Completado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <h2 class="section-title reveal">Proyectos Técnicos</h2>
+            <p class="section-subtitle reveal">Aplicaciones empresariales con arquitectura escalable</p>
+
+            <div class="projects-grid">
+                <!-- Trello Clone -->
+                <article class="project-card reveal">
+                    <div class="project-image-container">
+                        <img src="img/Encriptador.png" alt="Trello Clone" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Trello Clone</h3>
+                        <p class="project-description">
+                            Plataforma de gestión de tareas escalable con múltiples tableros, listas y
+                            funcionalidad drag-and-drop. Autenticación segura con JWT y control de acceso basado en
+                            roles.
+                            <strong>40% de mejora en rendimiento</strong> de respuesta bajo alta carga.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                            <span class="tech-tag"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                            <span class="tech-tag"><i class="fas fa-key"></i> JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PGPLAYER15/Clon-trello.git" target="_blank"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BookBase -->
+                <article class="project-card reveal">
+                    <div class="project-image-container">
+                        <img src="img/Barberia.png" alt="BookBase" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">BookBase - Sistema de Biblioteca</h3>
+                        <p class="project-description">
+                            Sistema integral de gestión de biblioteca con operaciones CRUD completas y
+                            autenticación de usuarios. API REST siguiendo principios SOLID, mejorando
+                            mantenibilidad en <strong>35%</strong>. Cobertura de tests del <strong>85%+</strong>.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fas fa-bolt"></i> FastAPI</span>
+                            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-tag"><i class="fas fa-database"></i> PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PGPLAYER15" target="_blank"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- EduManager -->
+                <article class="project-card reveal">
+                    <div class="project-image-container">
+                        <img src="img/Alura_play.png" alt="EduManager" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">EduManager - Sistema Escolar</h3>
+                        <p class="project-description">
+                            Solución full-stack de gestión escolar con backend en Python y cliente móvil iOS en Swift.
+                            API RESTful con sincronización de datos en tiempo real. Integración con SupaBase para
+                            alta disponibilidad.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-swift"></i> Swift</span>
+                            <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                            <span class="tech-tag"><i class="fas fa-cloud"></i> SupaBase</span>
+                            <span class="tech-tag"><i class="fas fa-key"></i> JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/PGPLAYER15" target="_blank"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Encriptador -->
+                <article class="project-card reveal">
+                    <div class="project-image-container">
+                        <img src="img/Juego_secreto.png" alt="Encriptador de Texto" class="project-image">
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Encriptador de Texto</h3>
+                        <p class="project-description">
+                            Aplicación web para encriptar y desencriptar mensajes de texto.
+                            Proyecto desarrollado como parte del challenge Oracle ONE.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag"><i class="fab fa-html5"></i> HTML</span>
+                            <span class="tech-tag"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://pgplayer15.github.io/challenge-ONE-1/" target="_blank"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                            <a href="https://github.com/PGPLAYER15/challenge-ONE-1" target="_blank"
+                                class="project-link project-link-secondary">
+                                <i class="fab fa-github"></i> Código
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATIONS SECTION ===== -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <h2 class="section-title reveal">Certificaciones</h2>
+            <p class="section-subtitle reveal">Credenciales y formación continua</p>
+
+            <div class="education-grid">
+                <div class="education-card reveal">
+                    <div class="certification-icon">
+                        <i class="fab fa-python" style="font-size: 3rem; color: #3776AB;"></i>
+                    </div>
+                    <div class="education-info">
+                        <h4>Python for Data Science, AI and Development</h4>
+                        <p>IBM</p>
+                    </div>
+                </div>
+
+                <div class="education-card reveal">
+                    <div class="certification-icon">
+                        <i class="fas fa-database" style="font-size: 3rem; color: #F80000;"></i>
+                    </div>
+                    <div class="education-info">
+                        <h4>SQL with MySQL Server</h4>
+                        <p>Oracle ONE</p>
+                    </div>
+                </div>
+
+                <div class="education-card reveal">
+                    <div class="certification-icon">
+                        <i class="fab fa-react" style="font-size: 3rem; color: #61DAFB;"></i>
+                    </div>
+                    <div class="education-info">
+                        <h4>Oracle React G6</h4>
+                        <p>Oracle ONE</p>
+                    </div>
+                </div>
+
+                <div class="education-card reveal">
+                    <div class="certification-icon">
+                        <i class="fas fa-code" style="font-size: 3rem; color: #F80000;"></i>
+                    </div>
+                    <div class="education-info">
+                        <h4>Front-End F2 T6</h4>
+                        <p>Oracle Next Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INTERESTS SECTION ===== -->
+    <section class="section hobbies">
+        <div class="container">
+            <h2 class="section-title reveal">Áreas de Interés</h2>
+            <p class="section-subtitle reveal">Tecnologías que estoy aprendiendo y explorando</p>
+
+            <div class="hobbies-grid stagger-children reveal">
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-brain" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">Machine Learning</p>
+                </div>
+
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-network-wired" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">Sistemas Distribuidos</p>
+                </div>
+
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-cubes" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">Microservicios</p>
+                </div>
+
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-cloud" style="font-size: 2.5rem; color: #F80000; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">Oracle Cloud</p>
+                </div>
+
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-code-branch" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">CI/CD Pipelines</p>
+                </div>
+
+                <div class="hobby-card hover-lift">
+                    <i class="fas fa-shield-alt" style="font-size: 2.5rem; color: #06b6d4; margin-bottom: 1rem;"></i>
+                    <p class="hobby-name">Security Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title reveal">Contacto</h2>
+            <p class="section-subtitle reveal">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+
+            <div class="contact-container">
+                <div class="contact-info reveal-left">
+                    <h3>Trabajemos juntos</h3>
+                    <p>
+                        Estoy siempre abierto a nuevas oportunidades y proyectos interesantes.
+                        Si tienes alguna pregunta o simplemente quieres saludar, no dudes en contactarme.
+                        <br><br>
+                        <strong>Idiomas:</strong> Español (Nativo), Inglés (B2 - Competente)
+                    </p>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <span>Ubicación</span>
+                            <p>Culiacán, Sinaloa, México</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <span>LinkedIn</span>
+                            <p>Marco Vinicio Palazuelos Leon</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-item-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-item-text">
+                            <span>GitHub</span>
+                            <p>@PGPLAYER15</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form reveal-right" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-logo">Marco<span>Dev</span></p>
+
+                <div class="footer-social">
+                    <a href="https://github.com/PGPLAYER15" target="_blank" class="footer-social-link"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marco-vinicio-palazuelos-leon-/" target="_blank"
+                        class="footer-social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="footer-divider"></div>
+
+                <p class="footer-bottom">
+                    Hecho con <i class="fas fa-heart"></i> por Marco Vinicio Palazuelos Leon &copy; 2025
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
 
 </html>

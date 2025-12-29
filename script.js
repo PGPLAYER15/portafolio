@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollReveal();
     initActiveNavLink();
     initSmoothScroll();
+    initContactForm();
 });
 
 // ===== NAVBAR SCROLL EFFECT =====
@@ -48,8 +49,8 @@ function initMobileMenu() {
 function initTypingEffect() {
     const typingElement = document.getElementById('typingText');
     const roles = [
-        'Full-Stack Developer',
         'Ingeniero de Software',
+        'Full-Stack Developer',
         'Desarrollador Backend',
         'Python | Java | JavaScript',
         'Oracle ONE Participant'
@@ -74,7 +75,6 @@ function initTypingEffect() {
         }
         
         if (!isDeleting && charIndex === currentRole.length) {
-            // Pausa antes de borrar
             typeSpeed = 2000;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
@@ -105,8 +105,6 @@ function initScrollReveal() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                // Opcional: dejar de observar después de revelar
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -141,7 +139,7 @@ function initActiveNavLink() {
     }
     
     window.addEventListener('scroll', updateActiveLink);
-    updateActiveLink(); // Ejecutar al cargar
+    updateActiveLink();
 }
 
 // ===== SMOOTH SCROLL =====
@@ -167,25 +165,18 @@ function initSmoothScroll() {
     });
 }
 
-// ===== FORM SUBMISSION =====
-const contactForm = document.getElementById('contactForm');
+// ===== CONTACT FORM =====
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Obtener datos del formulario
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        
-        // Aquí puedes agregar la lógica para enviar el formulario
-        // Por ejemplo, usando fetch para enviar a un backend
-        
-        console.log('Formulario enviado:', data);
-        
-        // Mostrar mensaje de éxito (puedes personalizar esto)
-        alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-        this.reset();
+function initContactForm() {
+    const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', function() {
+        const submitBtn = this.querySelector('.btn-submit');
+        if (submitBtn) {
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+            submitBtn.disabled = true;
+        }
     });
 }
 
@@ -201,24 +192,6 @@ function initParallax() {
     });
 }
 
-// ===== CURSOR CUSTOM (opcional, descomenta si quieres usarlo) =====
-/*
-function initCustomCursor() {
-    const cursor = document.createElement('div');
-    cursor.classList.add('custom-cursor');
-    document.body.appendChild(cursor);
-    
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-    });
-    
-    document.querySelectorAll('a, button').forEach(el => {
-        el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-        el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-    });
-}
-*/
 
 // ===== LOAD ANIMATION =====
 window.addEventListener('load', () => {

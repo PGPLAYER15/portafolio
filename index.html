@@ -160,7 +160,7 @@
 
                 <div class="skill-card hover-lift">
                     <div class="skill-icon">
-                        <i class="fab fa-java" style="color: #007396;"></i>
+                        <i class="fab fa-java" style="color: #ED8B00;"></i>
                     </div>
                     <p class="skill-name">Java</p>
                 </div>
@@ -326,8 +326,7 @@
                 </div>
 
                 <div class="education-card reveal-right">
-                    <img src="img/logos/logo-aluralatam-oracle.svg" alt="Oracle ONE con Alura Latam"
-                        class="education-logo">
+                    <img src="img/logos/logo_ONE.png" alt="Oracle ONE con Alura Latam" class="education-logo">
                     <div class="education-info">
                         <h4>Programa Oracle Next Education</h4>
                         <p>Con Alura Latam</p>
@@ -370,6 +369,14 @@
                                 class="project-link project-link-secondary">
                                 <i class="fab fa-github"></i> Código
                             </a>
+                            <a href="https://pgplayer15.github.io/challenge-ONE-1/" target="_blank"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
+                            </a>
+                        </div>
+                        <div class="demo-credentials">
+                            <small><i class="fas fa-key"></i> Demo: <code>test@gmail.com</code> /
+                                <code>Test1234.</code></small>
                         </div>
                     </div>
                 </article>
@@ -444,13 +451,13 @@
                             <span class="tech-tag"><i class="fab fa-css3-alt"></i> CSS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://pgplayer15.github.io/challenge-ONE-1/" target="_blank"
-                                class="project-link project-link-primary">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
                             <a href="https://github.com/PGPLAYER15/challenge-ONE-1" target="_blank"
                                 class="project-link project-link-secondary">
                                 <i class="fab fa-github"></i> Código
+                            </a>
+                            <a href="https://pgplayer15.github.io/challenge-ONE-1/" target="_blank"
+                                class="project-link project-link-primary">
+                                <i class="fas fa-external-link-alt"></i> Demo
                             </a>
                         </div>
                     </div>
@@ -596,7 +603,12 @@
                     </div>
                 </div>
 
-                <form class="contact-form reveal-right" id="contactForm">
+                <form class="contact-form reveal-right" id="contactForm" action="https://api.web3forms.com/submit"
+                    method="POST">
+                    <input type="hidden" name="access_key" value="21f0c4c1-971c-4c52-9792-d1e9eb9f4236">
+                    <input type="hidden" name="subject" value="Nuevo mensaje desde tu Portafolio">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
                     <div class="form-group">
                         <label for="name">Nombre</label>
                         <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>

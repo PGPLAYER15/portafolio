@@ -305,6 +305,36 @@
     color: var(--primary-color);
 }
 
+/* Demo Credentials */
+.demo-credentials {
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(6, 182, 212, 0.08);
+    border: 1px dashed rgba(6, 182, 212, 0.3);
+    border-radius: var(--border-radius-sm);
+    text-align: center;
+}
+
+.demo-credentials small {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+}
+
+.demo-credentials i {
+    color: var(--primary-color);
+    margin-right: 0.25rem;
+}
+
+.demo-credentials code {
+    background: rgba(6, 182, 212, 0.15);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', 'Monaco', monospace;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    user-select: all;
+}
+
 /* ===== CONTACT SECTION ===== */
 
 .contact-container {

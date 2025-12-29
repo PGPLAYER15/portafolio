@@ -2,5 +2,7 @@ services:
   portafolio:
     container_name: portafolio
     build: .
+    expose:
+      - "80"
     ports:
       - "8080:80"
